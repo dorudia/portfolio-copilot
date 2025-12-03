@@ -27,6 +27,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <style>{`
+          @media print {
+            .no-print {
+              display: none !important;
+            }
+            @page {
+              margin: 0.5cm;
+            }
+            body {
+              margin: 0;
+              padding: 0;
+            }
+          }
+        `}</style>
+      </head>
       <body
         className={`${jetbrainsMono.variable} ${greatVibes.variable} font-mono antialiased bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900`}
       >

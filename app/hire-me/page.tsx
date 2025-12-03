@@ -44,7 +44,7 @@ const services = [
 
 export default function HireMePage() {
   return (
-    <main className="min-h-screen pt-20">
+    <main className="min-h-screen md:pt-12">
       {/* Hero Section */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 text-center">
         <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
@@ -57,7 +57,7 @@ export default function HireMePage() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-white dark:bg-slate-900 py-20">
+      <section className="bg-white dark:bg-slate-900 py-10 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
             What I Offer
@@ -93,7 +93,7 @@ export default function HireMePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8 text-center">
+      <section className="mx-auto max-w-4xl px-4 py-10 md:py-20 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">
           Ready to start your project?
         </h2>

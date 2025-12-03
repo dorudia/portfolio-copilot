@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Code2, Briefcase, Mail } from "lucide-react";
+import { ArrowRight, Code2, Briefcase, Mail, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -79,10 +79,20 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start"
               variants={itemVariants}
             >
-              <Link href="/work">
+              <Link href="/cv">
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-green-700 text-slate-50 hover:bg-green-600 cursor-pointer"
+                >
+                  Download CV
+                  <FileText className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/work">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto cursor-pointer"
                 >
                   View My Work
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -92,7 +102,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto cursor-pointer"
                 >
                   Get in Touch
                   <Mail className="ml-2 h-4 w-4" />
