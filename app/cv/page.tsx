@@ -103,7 +103,10 @@ export default function CVPage() {
                       <h4 className="text-lg font-semibold text-slate-900">Frontend Developer</h4>
                       <p className="text-green-700 font-medium">MACH Development & Consulting</p>
                     </div>
-                    <span className="text-sm text-slate-600 whitespace-nowrap">Sep 2024 - Present</span>
+                    <div className="text-right">
+                      <span className="text-sm text-slate-600 whitespace-nowrap">Sep 2024 - Present</span>
+                      <p className="text-xs text-slate-400 mt-1">1 year 4 months</p>
+                    </div>
                   </div>
                   <p className="text-sm text-slate-600 mb-2">Iaşi, Romania · Remote · Full-time</p>
                 </div>
@@ -114,7 +117,10 @@ export default function CVPage() {
                       <h4 className="text-lg font-semibold text-slate-900">Frontend Developer</h4>
                       <p className="text-green-700 font-medium">Tremend Software Consulting</p>
                     </div>
-                    <span className="text-sm text-slate-600 whitespace-nowrap">Feb 2022 - Feb 2024</span>
+                    <div className="text-right">
+                      <span className="text-sm text-slate-600 whitespace-nowrap">Feb 2022 - Feb 2024</span>
+                      <p className="text-xs text-slate-400 mt-1">2 years 1 month</p>
+                    </div>
                   </div>
                   <p className="text-sm text-slate-600 mb-2">Bucureşti, România · Full-time</p>
                   <p className="text-sm text-slate-700">Skills: Jira · Git · Responsive Web Design</p>
@@ -126,7 +132,10 @@ export default function CVPage() {
                       <h4 className="text-lg font-semibold text-slate-900">Junior Frontend Developer</h4>
                       <p className="text-green-700 font-medium">Mocha Global</p>
                     </div>
-                    <span className="text-sm text-slate-600 whitespace-nowrap">Jun 2021 - Dec 2021</span>
+                    <div className="text-right">
+                      <span className="text-sm text-slate-600 whitespace-nowrap">Jun 2021 - Dec 2021</span>
+                      <p className="text-xs text-slate-400 mt-1">7 months</p>
+                    </div>
                   </div>
                   <p className="text-sm text-slate-600 mb-2">Bucharest, Romania · Full-time</p>
                   <p className="text-sm text-slate-700">Skills: Jira · Git · Responsive Web Design</p>
