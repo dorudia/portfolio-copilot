@@ -1,65 +1,220 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight, Code2, Briefcase, Mail } from "lucide-react";
+import { motion } from "framer-motion";
 import Image from "next/image";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6 },
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main className="min-h-[calc(100vh-69px)] py-8 md:pt-20">
+      {/* Hero Section */}
+      <section className="mx-auto max-w-6xl max-h-[calc(100vh-5rem)] px-4 py-0 pb-4 md:py-20 sm:px-6 lg:px-8">
+        <motion.div
+          className="space-y-8 text-center md:text-left md:flex md:items-center md:justify-between"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="md:w-1/2 space-y-6" variants={itemVariants}>
+            <div className="space-y-2">
+              <motion.p
+                className="text-lg font-semibold text-green-700 dark:text-green-400 mb-2"
+                variants={itemVariants}
+              >
+                Welcome to my portfolio
+              </motion.p>
+              <motion.h1
+                className="text-5xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white"
+                variants={itemVariants}
+              >
+                <span
+                  className="text-green-700 dark:text-green-400 tracking-wide font-medium"
+                  style={{ fontFamily: "var(--font-great-vibes)" }}
+                >
+                  Diaconu Doru
+                </span>
+              </motion.h1>
+            </div>
+            <motion.p
+              className="text-xl text-slate-600 dark:text-slate-300 max-w-lg mx-auto md:mx-0"
+              variants={itemVariants}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Frontend Developer with expertise in building beautiful,
+              responsive web applications. Skilled in React, Next.js, and modern
+              web technologies with knowledge of Node.js, Express, MongoDB, and
+              Mongoose for full-stack development.
+            </motion.p>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start"
+              variants={itemVariants}
             >
-              Learning
-            </a>{" "}
-            center.
+              <Link href="/work">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-green-700 text-slate-50 hover:bg-green-600 cursor-pointer"
+                >
+                  View My Work
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto"
+                >
+                  Get in Touch
+                  <Mail className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Profile Image */}
+          <motion.div
+            className="md:w-1/2 flex justify-center"
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              className="relative w-72 h-72 rounded-2xl overflow-hidden shadow-2xl"
+              whileHover={{ scale: 1.25 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Image
+                src="/my_photo.jpeg"
+                alt="Diaconu Doru"
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Features Section */}
+      {/* <section className="bg-white dark:bg-slate-900 py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            className="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            What I Do
+          </motion.h2>
+          <motion.div
+            className="grid md:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div
+              className="p-6 rounded-lg border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-shadow"
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+            >
+              <Code2 className="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                Frontend Development
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400">
+                Building responsive and performant web applications using React,
+                Next.js, TypeScript, and modern web technologies.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="p-6 rounded-lg border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-shadow"
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+            >
+              <Briefcase className="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                Full Stack Capable
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400">
+                Experience with backend technologies including Node.js, Express,
+                MongoDB, and Mongoose for complete end-to-end development.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="p-6 rounded-lg border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-shadow"
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+            >
+              <Mail className="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                UI/UX Implementation
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400">
+                Creating beautiful, intuitive interfaces with attention to user
+                experience and modern design principles using Tailwind CSS and
+                Shadcn/UI.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section> */}
+
+      {/* CTA Section */}
+      {/* <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            Ready to start a project?
+          </h2>
+          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+            Let's create something amazing together. Feel free to reach out!
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          <Link href="/contact">
+            <Button size="lg" className="text-base">
+              Get in Touch
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+        </motion.div>
+      </section> */}
+    </main>
   );
 }
