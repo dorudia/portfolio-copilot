@@ -18,7 +18,7 @@ const experiences = [
     company: "Tremend Software Consulting",
     location: "Bucureşti, România",
     type: "Full-time",
-    skills: "Jira · Git · Responsive Web Design",
+    // skills: "Jira · Git · Responsive Web Design",
     duration: "2 years 1 month",
   },
   {
@@ -27,7 +27,7 @@ const experiences = [
     company: "Mocha Global",
     location: "Bucharest, Romania",
     type: "Full-time",
-    skills: "Jira · Git · Responsive Web Design",
+    // skills: "Jira · Git · Responsive Web Design",
     duration: "7 months",
   },
 ];
