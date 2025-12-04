@@ -112,7 +112,7 @@ export default function WorkPage() {
                     rel="noopener noreferrer"
                     className="flex-1"
                   >
-                    <Button variant="outline" size="sm" className="w-full">
+                    <Button variant="outline" size="sm" className="w-full cursor-pointer">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live
                     </Button>
@@ -123,7 +123,7 @@ export default function WorkPage() {
                     rel="noopener noreferrer"
                     className="flex-1"
                   >
-                    <Button variant="outline" size="sm" className="w-full">
+                    <Button variant="outline" size="sm" className="w-full cursor-pointer">
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </Button>
