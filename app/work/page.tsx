@@ -29,7 +29,7 @@ const projects = [
     id: 3,
     title: "My List of Things",
     description:
-      "React Native todo app with Express backend. Features push notifications for list items with set reminders, synced across devices. Currently available as APK download for Android only.",
+      "React Native List of Things app with Express backend. Features push notifications for list items with set reminders, synced across devices. Currently available as APK download for Android only.",
     src: "/project-images/project-3.png",
     technologies: [
       "React Native",
@@ -44,7 +44,7 @@ const projects = [
     id: 4,
     title: "My Shop",
     description:
-      "Full-stack e-commerce app with Node.js & Express. Features user authentication, product catalog, shopping cart, Stripe checkout, and PDF invoice download.",
+      "Full-stack e-commerce app with Node.js, Express and . Features user authentication, shopping cart, Stripe checkout, and PDF invoice download.",
     src: "/project-images/project-4.png",
     technologies: ["Node.js", "Express", "Stripe", "MongoDB"],
     link: "https://node-shop-server-445ec73bbfa9.herokuapp.com/",
@@ -112,7 +112,11 @@ export default function WorkPage() {
                     rel="noopener noreferrer"
                     className="flex-1"
                   >
-                    <Button variant="outline" size="sm" className="w-full cursor-pointer">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full cursor-pointer"
+                    >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live
                     </Button>
@@ -123,7 +127,11 @@ export default function WorkPage() {
                     rel="noopener noreferrer"
                     className="flex-1"
                   >
-                    <Button variant="outline" size="sm" className="w-full cursor-pointer">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full cursor-pointer"
+                    >
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </Button>

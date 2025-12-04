@@ -10,6 +10,7 @@ const experiences = [
     company: "MACH Development & Consulting",
     location: "Iaşi, Romania · Remote",
     type: "Full-time",
+    duration: "1 year 4 months",
   },
   {
     period: "Feb 2022 - Feb 2024",
@@ -18,6 +19,7 @@ const experiences = [
     location: "Bucureşti, România",
     type: "Full-time",
     skills: "Jira · Git · Responsive Web Design",
+    duration: "2 years 1 month",
   },
   {
     period: "Jun 2021 - Dec 2021",
@@ -26,6 +28,7 @@ const experiences = [
     location: "Bucharest, Romania",
     type: "Full-time",
     skills: "Jira · Git · Responsive Web Design",
+    duration: "7 months",
   },
 ];
 
@@ -156,6 +159,11 @@ export default function ResumePage() {
                     <div className="text-sm text-slate-500 dark:text-slate-400 mt-2">
                       {e.period}
                     </div>
+                    {e.duration && (
+                      <div className="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                        {e.duration}
+                      </div>
+                    )}
                     <div className="text-sm text-slate-600 dark:text-slate-300 mt-1">
                       {e.location}
                     </div>
