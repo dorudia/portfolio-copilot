@@ -61,7 +61,7 @@ export default function ResumePage() {
             <div className="hidden md:flex flex-col space-y-3">
               <button
                 onClick={() => setActive("experience")}
-                className={`text-left px-4 py-3 rounded ${
+                className={`text-left px-4 py-3 rounded cursor-pointer ${
                   active === "experience"
                     ? "bg-green-700 text-white"
                     : "hover:bg-slate-100 dark:hover:bg-slate-900"
@@ -71,7 +71,7 @@ export default function ResumePage() {
               </button>
               <button
                 onClick={() => setActive("education")}
-                className={`text-left px-4 py-3 rounded ${
+                className={`text-left px-4 py-3 rounded cursor-pointer ${
                   active === "education"
                     ? "bg-green-700 text-white"
                     : "hover:bg-slate-100 dark:hover:bg-slate-900"
@@ -81,7 +81,7 @@ export default function ResumePage() {
               </button>
               <button
                 onClick={() => setActive("skills")}
-                className={`text-left px-4 py-3 rounded ${
+                className={`text-left px-4 py-3 rounded cursor-pointer ${
                   active === "skills"
                     ? "bg-green-700 text-white"
                     : "hover:bg-slate-100 dark:hover:bg-slate-900"
@@ -91,7 +91,7 @@ export default function ResumePage() {
               </button>
               <button
                 onClick={() => setActive("about")}
-                className={`text-left px-4 py-3 rounded ${
+                className={`text-left px-4 py-3 rounded cursor-pointer ${
                   active === "about"
                     ? "bg-green-700 text-white"
                     : "hover:bg-slate-100 dark:hover:bg-slate-900"
@@ -107,7 +107,7 @@ export default function ResumePage() {
                 <button
                   key={k}
                   onClick={() => setActive(k as any)}
-                  className={`min-w-[120px] flex-0 px-3 py-2 rounded-md ${
+                  className={`min-w-[120px] flex-0 px-3 py-2 rounded-md cursor-pointer ${
                     active === k
                       ? "bg-green-500 text-white dark:bg-green-600"
                       : "bg-transparent hover:bg-slate-100 dark:hover:bg-slate-900"

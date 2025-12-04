@@ -85,7 +85,7 @@ export default function CVPage() {
               </h3>
               <p className="text-slate-700 leading-relaxed">
                 Frontend developer with 4+ years of experience focused on building performant and
-                accessible user interfaces. Proficient in React, Next.js, and modern web technologies.
+                accessible user interfaces. Experienced in React, Next.js, and modern web technologies.
                 Experience with backend technologies (Node.js, Express, MongoDB) and enjoy working
                 end-to-end on projects. Available for freelance opportunities.
               </p>

@@ -102,12 +102,12 @@ export default function HireMePage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/contact">
-            <Button size="lg">
+            <Button size="lg" className="cursor-pointer">
               Get in Touch
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
-          <Button size="lg" variant="outline">
+          <Button size="lg" variant="outline" className="cursor-pointer">
             <a href="mailto:dorudia@gmail.com">Send Email</a>
           </Button>
         </div>
