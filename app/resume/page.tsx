@@ -167,11 +167,11 @@ export default function ResumePage() {
                     <div className="text-sm text-slate-600 dark:text-slate-300 mt-1">
                       {e.location}
                     </div>
-                    {e.skills && (
+                    {/* {e.skills && (
                       <div className="text-sm text-slate-600 dark:text-slate-400 mt-3">
                         Skills: {e.skills}
                       </div>
-                    )}
+                    )} */}
                   </article>
                 ))}
               </motion.div>
