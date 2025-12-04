@@ -29,7 +29,7 @@ const projects = [
     id: 3,
     title: "My List of Things",
     description:
-      "React Native todo app with Express backend. Features push notifications for list items with set reminders, synced across devices.",
+      "React Native todo app with Express backend. Features push notifications for list items with set reminders, synced across devices. Currently available as APK download for Android only.",
     src: "/project-images/project-3.png",
     technologies: [
       "React Native",
