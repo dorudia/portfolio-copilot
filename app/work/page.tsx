@@ -44,7 +44,7 @@ const projects = [
     id: 4,
     title: "My Shop",
     description:
-      "Full-stack e-commerce app with Node.js, Express and . Features user authentication, shopping cart, Stripe checkout, and PDF invoice download.",
+      "Full-stack e-commerce app with Node.js and Express. Features user authentication, shopping cart, Stripe checkout, and PDF invoice download.",
     src: "/project-images/project-4.png",
     technologies: ["Node.js", "Express", "Stripe", "MongoDB"],
     link: "https://node-shop-server-445ec73bbfa9.herokuapp.com/",
