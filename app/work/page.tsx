@@ -42,10 +42,20 @@ const projects = [
   },
   {
     id: 4,
+    title: "Inventory App",
+    description:
+      "Full-stack inventory management system with Next.js and MongoDB. Features multi-inventory support with email sharing, real-time dashboard with Recharts visualization, CSV export, and Clerk authentication. Built in a few hours with GitHub Copilot.",
+    src: "/project-images/project-4.png",
+    technologies: ["Next.js", "TypeScript", "MongoDB", "Clerk", "Recharts"],
+    link: "https://inventory-app-6sdp.vercel.app",
+    github: "https://github.com/dorudia/inventory-app",
+  },
+  {
+    id: 5,
     title: "My Shop",
     description:
       "Full-stack e-commerce app with Node.js and Express. Features user authentication, shopping cart, Stripe checkout, and PDF invoice download.",
-    src: "/project-images/project-4.png",
+    src: "/project-images/project-5.png",
     technologies: ["Node.js", "Express", "Stripe", "MongoDB"],
     link: "https://node-shop-server-445ec73bbfa9.herokuapp.com/",
     github: "https://github.com/dorudia/node-shop",
