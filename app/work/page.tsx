@@ -44,7 +44,7 @@ const projects = [
     id: 4,
     title: "Inventory App",
     description:
-      "Full-stack inventory management system with Next.js and MongoDB. Features multi-inventory support with email sharing, real-time dashboard with Recharts visualization, CSV export, and Clerk authentication. Built in a few hours with GitHub Copilot help. Only desktop version available.",
+      "Full-stack inventory management system with Next.js and MongoDB. Features multi-inventory support with email sharing, real-time dashboard with Recharts visualization, CSV export, and Clerk authentication. Built in a few hours with GitHub Copilot help.",
     src: "/project-images/project-4.png",
     technologies: ["Next.js", "TypeScript", "MongoDB", "Clerk", "Recharts"],
     link: "https://inventory-app-6sdp.vercel.app",
